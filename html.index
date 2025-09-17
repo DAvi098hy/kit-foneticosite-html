@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit de Grafismo Fonético - Seu Filho Lendo 5x Mais Rápido</title>
+
+    <meta name="description" content="Kit de Grafismo Fonético - Ensine seu filho a ler até 5x mais rápido com método americano comprovado. Para crianças de 2 a 12 anos, incluindo TDAH e Autismo.">
+    <meta name="keywords" content="grafismo fonético, leitura infantil, TDAH, autismo, método de leitura, educação infantil" />
+    <meta name="author" content="Kit de Grafismo Fonético" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Inicializa o Pixel e dispara o PageView
+    fbq('init', 'SEU_PIXEL_ID'); // <-- TROQUE PELO SEU ID REAL
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    </head>
+<body>
+    
+<header class="header">
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> fonetik </a>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">sobre</a>
+        <a href="#services">serviços</a>
+        <a href="#doctors">professores</a>
+        <a href="#review">avaliações</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+</header>
+
+<section class="home" id="home">
+    <div class="image">
+        <img src="image/Phonetic-pana.svg" alt="">
+    </div>
+    <div class="content">
+        <h3>o poder do grafismo fonetico</h3>
+        <p>Acelere sua Leitura e Potencialize seu Aprendizado.!</p>
+        <a href="#" class="btn" id="botao-comprar"> QUERO O MEU KIT AGORA <span class="fas fa-chevron-right"></span> </a>
+    </div>
+</section>
+
+<section class="footer">
+    </section>
+
+<script src="js/script.js"></script>
+
+<script>
+  // Dispara o ViewContent com todos os detalhes quando a página carrega
+  fbq('track', 'ViewContent', {
+    content_ids: ['kit-fonetico-97'],
+    content_type: 'product',
+    content_name: 'Kit Fonetik Move Read',
+    value: 10.00,
+    currency: 'BRL'
+  });
+
+  // Adiciona o rastreamento de InitiateCheckout ao botão de compra
+  document.getElementById('botao-comprar').addEventListener('click', function() {
+    fbq('track', 'InitiateCheckout', {
+      content_ids: ['kit-fonetico-97'],
+      content_name: 'Kit Fonetik Move Read',
+      value: 10.00,
+      currency: 'BRL'
+    });
+  }, false);
+</script>
+
+</body>
+</html>
