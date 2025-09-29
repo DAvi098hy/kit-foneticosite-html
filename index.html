@@ -267,13 +267,17 @@ document.addEventListener("DOMContentLoaded", function() {
   // Encontra o container específico do seu carrossel e o inicializa
   var carrossel = new Swiper('.elementor-element-1c818c52 .elementor-image-carousel-wrapper', {
     
-    // Configurações baseadas no seu código original
-    slidesPerView: 3, // 3 slides visíveis em telas grandes
-    spaceBetween: 20, // Espaço entre os slides
+    // Configurações que já tínhamos
+    slidesPerView: 3,
+    spaceBetween: 20,
     loop: true,
     autoplay: {
       delay: 7000,
     },
+
+    // ### A LINHA QUE FALTAVA ###
+    lazy: true, // Ativa o carregamento inteligente de imagens
+    
     navigation: {
       nextEl: '.elementor-element-1c818c52 .elementor-swiper-button-next',
       prevEl: '.elementor-element-1c818c52 .elementor-swiper-button-prev',
@@ -281,14 +285,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Configuração para telas de tablet e celular (responsividade)
     breakpoints: {
-      // Para telas com largura até 767px (celulares)
       767: {
-        slidesPerView: 1, // Mostra 1 slide por vez
+        slidesPerView: 1,
         spaceBetween: 10
       },
-      // Para telas com largura até 1024px (tablets)
       1024: {
-        slidesPerView: 3, // Mostra 3 slides por vez
+        slidesPerView: 3,
         spaceBetween: 15
       }
     }
