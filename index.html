@@ -236,19 +236,29 @@ if(typeof haCursor=='undefined'||haCursor==null){initiateHaCursorObject(speed)}
 setTimeout(function(){let targetCursor=$('.ha-cursor');if(targetCursor){if(!isEnable){$('body').removeClass('hm-init-default-cursor-none');$('.ha-cursor').addClass('ha-init-hide')}else{$('body').addClass('hm-init-default-cursor-none');$('.ha-cursor').removeClass('ha-init-hide')}}},500)})}(jQuery,window))</script> <script id="elementor-frontend-js-before" type="litespeed/javascript">var elementorFrontendConfig={"environmentMode":{"edit":!1,"wpPreview":!1,"isScriptDebug":!1},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":!1,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":!0},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":!1},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":!0},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":!1},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":!1},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":!1}},"hasCustomBreakpoints":!1},"version":"3.32.2","is_static":!1,"experimentalFeatures":{"e_font_icon_svg":!0,"additional_custom_breakpoints":!0,"container":!0,"theme_builder_v2":!0,"hello-theme-header-footer":!0,"nested-elements":!0,"home_screen":!0,"global_classes_should_enforce_capabilities":!0,"e_variables":!0,"cloud-library":!0,"e_opt_in_v4_page":!0,"import-export-customization":!0},"urls":{"assets":"https:\/\/educacaokids.com.br\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/educacaokids.com.br\/wp-admin\/admin-ajax.php","uploadUrl":"http:\/\/educacaokids.com.br\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"022a9c95b9"},"swiperClass":"swiper","settings":{"page":{"ha_cmc_init_switcher":"no"},"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo","ha_rpb_enable":"no"},"post":{"id":2148,"title":"Pv%20Grafismo%20Fon%C3%A9tico%20V2%20%E2%80%93%20Kit%20Educa%C3%A7%C3%A3o%20Kids","excerpt":"","featuredImage":!1}}</script> <script id="happy-elementor-addons-js-extra" type="litespeed/javascript">var HappyLocalize={"ajax_url":"https:\/\/educacaokids.com.br\/wp-admin\/admin-ajax.php","nonce":"49b6c516a2","pdf_js_lib":"https:\/\/educacaokids.com.br\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"}</script> 
 </script><script>
 document.addEventListener("DOMContentLoaded", function() {
-  var carrossel = new Swiper('.swiper', { // Usando o seletor simplificado
+  // Este seletor é o correto para a estrutura do Elementor
+  var carrossel = new Swiper('.elementor-image-carousel-wrapper.swiper', {
     
     // Configurações
     lazy: true,
     loop: true,
     slidesPerView: 3,
     spaceBetween: 20,
-    
-    // Navegação
-    navigation: {
-      nextEl: '.swiper-button-next', // Seletor simplificado
-      prevEl: '.swiper-button-prev', // Seletor simplificado
+    autoplay: {
+      delay: 7000,
     },
+    
+    // Navegação com os seletores corretos do Elementor
+    navigation: {
+      nextEl: '.elementor-swiper-button-next',
+      prevEl: '.elementor-swiper-button-prev',
+    },
+
+    // Responsividade
+    breakpoints: {
+      767: { slidesPerView: 1, spaceBetween: 10 },
+      1024: { slidesPerView: 3, spaceBetween: 15 }
+    }
   });
 });
 </script></body></html>
